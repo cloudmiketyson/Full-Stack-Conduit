@@ -1,0 +1,26 @@
+STEPS TO COMPLETE FULL-STACK-CONDUIT PROJECT
+
+1. clone repository
+
+2. cd into backend and create .env file 
+
+3.edit .env file with (password=root) and jwt_key
+
+4. generate JWT_KEY by running this command: openssl rand -out secret.txt -hex 20
+
+5.install package of mysql server and npm
+
+6. log into mysql and update the root credentials
+
+ALTER USER 'root'@'localhost' IDENTIFIED with mysql_native_password BY 'root';
+FLUSH PRIVILEGES;
+
+7. run this command "install npm install -w backend mysql2"
+
+8. run this command "npm install --save-dev sequelize-cli"  then "npx sequelize --version"
+
+9. Now you can create the database with sqlz command
+
+"npm run sqlz -- db:create"
+10. after creating the database, you can now run:
+"npm run dev" to launch the application
